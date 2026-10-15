@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "elytra-ap",
+	"version": "${version}",
+	"name": "Elytra AP",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Puppygirl Lilly"
+	],
+	"contact": {
+		"homepage": "https://github.com/SnipeYouBoys",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/elytra-ap/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			{
+				"value": "me.lilly.elytraap.ElytraAP",
+				"adapter": "kotlin"
+			}
+		],
+		"fabric-datagen": [
+			{
+				"value": "me.lilly.elytraap.ElytraAPDataGenerator",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"elytra-ap.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}
