@@ -68,6 +68,19 @@ object Commands {
                         }
                     )
             )
+            //rocketdelay
+            dispatcher.register(
+                ClientCommands.literal("rocketdelay")
+                    .then(ClientCommands.argument("rocketdelay", IntegerArgumentType.integer(1, 30))
+                        .executes { context ->
+                            val rd = IntegerArgumentType.getInteger(context, "rocketdelay")
+
+                            Autopilot.rocketdelay = (rd*20)
+                            context.source.sendFeedback(Component.literal("rocket delay set to ${rd}s"))
+                            1
+                        }
+                    )
+            )
         }
     }
 }
