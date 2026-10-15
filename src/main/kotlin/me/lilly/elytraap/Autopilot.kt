@@ -10,9 +10,9 @@ import kotlin.math.atan2
 object Autopilot {
     var enabled: Boolean = false
     var targetloc: Vec3 = Vec3(0.0, 0.0, 0.0)
-    var targetalt: Int = 0
-    var turnspeed: Int = 10
-    var rocketdelay: Int = 100
+    var targetalt: Int = 150
+    var turnspeed: Int = 5
+    var rocketdelay: Int = 20*3
 
     var rocketCooldown: Int = 0
 
@@ -64,7 +64,7 @@ object Autopilot {
             //ROCKETS SHIT
             if (rocketCooldown > 0) { rocketCooldown-- }
 
-            if (rocketCooldown < 1) {
+            if (rocketCooldown < 1 && isClimbing) {
                 val mainHand = player.mainHandItem
                 val offHand = player.offhandItem
 

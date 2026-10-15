@@ -3,8 +3,6 @@ package me.lilly.elytraap
 import com.mojang.brigadier.arguments.IntegerArgumentType
 import net.fabricmc.fabric.api.client.command.v2.ClientCommands
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandRegistrationCallback
-import net.minecraft.commands.arguments.coordinates.Coordinates
-import net.minecraft.commands.arguments.coordinates.Vec2Argument
 import net.minecraft.network.chat.Component
 import net.minecraft.world.phys.Vec3
 
